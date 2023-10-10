@@ -31,7 +31,7 @@ namespace Tyuiu.BrukhovAA.Sprint2.Task3.V4
             Console.WriteLine("**************************************************************************");
 
             Console.WriteLine("Введите значение x");
-            double x = Convert.ToInt32(Console.ReadLine());
+            double x = Convert.ToDouble(Console.ReadLine());
             double res = Math.Round(ds.Calculate(x), 3);
 
             Console.WriteLine("**************************************************************************");

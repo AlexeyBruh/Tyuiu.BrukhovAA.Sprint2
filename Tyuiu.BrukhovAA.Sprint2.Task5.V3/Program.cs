@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using Tyuiu.BrukhovAA.Sprint2.Task4.V25.Lib;
+using Tyuiu.BrukhovAA.Sprint2.Task5.V3.Lib;
 
-namespace Tyuiu.BrukhovAA.Sprint2.Task4.V25
+namespace Tyuiu.BrukhovAA.Sprint2.Task5.V3
 {
     class Program
     {
@@ -17,31 +17,37 @@ namespace Tyuiu.BrukhovAA.Sprint2.Task4.V25
             Console.WriteLine("**************************************************************************");
             Console.WriteLine("* Спринт #2                                                              *");
             Console.WriteLine("* Тема: Создание итогового решения по спринту                            *");
-            Console.WriteLine("* Задание #4                                                             *");
-            Console.WriteLine("* Вариант #25                                                            *");
+            Console.WriteLine("* Задание #5                                                             *");
+            Console.WriteLine("* Вариант #3                                                             *");
             Console.WriteLine("* Выполнил: Брюхов Алексей Андреевич | АСОиУБ-23-1                       *");
             Console.WriteLine("**************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                               *");
-            Console.WriteLine("* Написать программу, которая вычисляет требуемое значение с             *");
-            Console.WriteLine("* с использованием тернарного оператора, где польхователь вводит значение*");
-            Console.WriteLine("* переменных x, y с клавиатуры.                                          *");
-            Console.WriteLine("* Округлить полученное значение до трех знаков после запятой.            *");
+            Console.WriteLine("* Составить программу, которая в зависимости от порядкового номера дня   *");
+            Console.WriteLine("* недели (1, 2, …, 7) выводит на экран его название                      *");
+            Console.WriteLine("* (понедельник, вторник, …, воскресенье).                                *");
             Console.WriteLine("**************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                       *");
             Console.WriteLine("**************************************************************************");
 
-            Console.WriteLine("Введите значение x");
-            double x = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Введите значение y");
-            double y = Convert.ToDouble(Console.ReadLine());
-            double res = Math.Round(ds.Calculate(x, y), 3);
+            Console.WriteLine("Введите номер дня недели");
+            int x = Convert.ToInt32(Console.ReadLine());
+            string res;
 
+            if((x < 1) || (x > 7))
+            {
+                res = "Значение введено неверно";
+            }
+            else
+            {
+                res = "День недели: " + ds.FindDayName(x);
+            }
             Console.WriteLine("**************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                             *");
             Console.WriteLine("**************************************************************************");
 
-            Console.WriteLine("Требуемое значение  = " + res);
+            Console.WriteLine(res);
             Console.ReadKey();
+
         }
     }
 }
