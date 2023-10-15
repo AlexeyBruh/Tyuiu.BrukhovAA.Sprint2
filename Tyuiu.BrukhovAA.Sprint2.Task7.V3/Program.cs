@@ -18,7 +18,7 @@ namespace Tyuiu.BrukhovAA.Sprint2.Task7.V3
             Console.WriteLine("* Спринт #2                                                              *");
             Console.WriteLine("* Тема: Создание итогового решения по спринту                            *");
             Console.WriteLine("* Задание #7                                                             *");
-            Console.WriteLine("* Вариант #3                                                            *");
+            Console.WriteLine("* Вариант #3                                                             *");
             Console.WriteLine("* Выполнил: Брюхов Алексей Андреевич | АСОиУБ-23-1                       *");
             Console.WriteLine("**************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                               *");
